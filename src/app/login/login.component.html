@@ -1,0 +1,21 @@
+<form>
+  <div class="form-group">
+    <label for="mobileNumber">Mobile Number</label>
+    <input type="tel" 
+        id="mobileNumber"
+        name="mobileNumber"
+        ngModel
+        #mobileNumber="ngModel"
+        required
+        minlength="10"
+        maxlength="12" 
+        class="form-control">
+  </div>
+  <div *ngIf="mobileNumber.touched && !mobileNumber.valid">
+    <div *ngIf="mobileNumber.errors.required" class="alert alert-danger">Please enter your mobile number</div>
+  </div>
+  <input type="button" 
+      value="Submit" 
+      (click)="log(mobileNumber)"
+      class="btn btn-primary"/>
+</form>

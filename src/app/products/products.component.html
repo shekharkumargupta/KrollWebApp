@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let product of products" style="margin: 5px;">
+        <div>
+          <div>
+            <img src="https://charliesfruitonline.com.au/wp-content/uploads/2014/01/Granny-Smith-Apple-1-e1484884328222.png"/>
+          </div>
+          <div>
+            <h4>
+              {{product.name}}
+            </h4>
+            <div>
+              Rs. {{product.price}}/-
+            </div>
+            <hr>
+            <p>{{product.description}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
